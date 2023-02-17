@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    position: relative;
+}
+
+.card{
+    width: 20px;height: 20px;
+    border: 1px solid black;
+    margin: 20px;
+}
+
+.card:nth-child(1) {
+    background: red;
+}
+.card:nth-child(2) {
+    background: green;
+}
+.card:nth-child(3) {
+    background: blue;
+}
+
+.card{
+    display: none;
+}
+.active{
+    display: block !important;
+}
+.highlight{
+    border: 2px solid blueviolet !important;
+}
+
+.cards__element{
+
+}

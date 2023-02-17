@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#app{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+button{
+    width: 50px;
+    height: 20px;
+}
+#app>div{
+    border: 1px rgba(0, 0, 0, 0.425) solid;
+    padding: 10px;
+}

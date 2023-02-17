@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <div id="app">
+      <div> {{ msg }} </div>
+      <div v-once> {{ msgOnce }} </div>
+      <div>
+        <span> {{ html }} </span> 
+        <span v-html="html"> </span>
+      </div>
+      <div>
+        <span v-bind:id="msg">Здесь представление того что msg нельзя пихать в атрибуты усами</span>
+      </div>
+      <div>
+        <button v-bind:disabled="isButtonDisabled"></button>
+      </div>
+      <div>
+        <div v-for="item in list" id="list" v-on:click="alertClickOnIt(item.text)"> {{ item.text }}  </div>
+      </div>
+      <div>
+        <a v-bind:[atagarg]="aTagTmp.value"> {{ aTagTmp.text }}</a>
+      </div>
+      <div>
+        <form v-on:submit.prevent="onSubmit">просто пример .prevent</form>
+      </div>
+      <div>
+        <div v-on:click="alertClickOnIt('Клик по полной форме')">Полная форма</div>
+        <div @click="alertClickOnIt('Клик по сокращенной форме')">сокращенная форма</div>
+        
+        <div v-bind:title="list[1].text">Полный вид бинда</div>
+        <div :title="list[0].text">Сокр вид бинда</div> 
+      </div>
+      <div>
+        <e-btn ></e-Btn>
+      </div>
+    </div>
+    
+    <script src="https://unpkg.com/lodash@4.17.20/lodash.min.js"></script> <!-- debouncer -->
+    <script src="script.js"></script> 
+</body>
+</html>
