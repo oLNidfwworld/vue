@@ -36,3 +36,14 @@ body{
 .cards__element{
 
 }
+
+#app>div{
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px black solid;
+}
+#other-app>div{
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px black solid;
+}

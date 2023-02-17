@@ -12,8 +12,29 @@ const app = Vue.createApp({
             classObject: {
                 active: true,
                 highlight: true
-            }
+            },
+
+        }
+    },
+    computed:{
+        compClass(){
+             return this.isActive?'computedActive':' '
         }
     }
 }).mount('#app');
 
+const  otherApp = Vue.createApp({
+    data(){
+        return{
+            fontSize: '30px',
+            color:'red'
+        }
+    }
+}).component('custom-component',{
+    data(){
+        return{
+            className: 'componentClass', 
+        }
+    },
+    template: '<p :class="className" class="class1 class2"> Я компонент </p>'
+}).mount('#other-app')

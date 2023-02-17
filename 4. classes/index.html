@@ -14,9 +14,22 @@
             <div v-for="cube in cubes" class="card" :class="{'active':cube.isActive,'highlight':cube.isHighligted}">  </div>
         </div>
         <div :class="classObject">я вахуи</div>
+        <div :class="[isActive, classObject]">
+            как массив
+        </div>
+        <div :class="compClass">
+            Вычисляемое поле
+        </div>
     </div>
+    <div id="other-app">
+        <div>
+            <custom-component class="class3 class4" ></custom-component>
+            <custom-component class="class3 class4"></custom-component>
+            <custom-component class="class3 class4"></custom-component>
+            <custom-component :style="{fontSize:fontSize,color:color}"></custom-component>
+        </div>
 
-
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
