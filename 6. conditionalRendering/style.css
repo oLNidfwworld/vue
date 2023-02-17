@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#app>div{
+    padding: 20px;
+    border: 1px solid;
+    margin: 20px 0;
+}
+.tab{
+    padding-left: 20px;
+}
+template{
+    display: block;
+}

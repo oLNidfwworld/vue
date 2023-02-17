@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <div id="app">
+         <div >
+            <P>V-IF/V-ELSE</P>
+            <div class="tab">
+                <div v-if="error" >Возникла ошибка</div>
+                <div v-else>Контент</div>
+            </div>
+         </div>
+         <div >
+            <P>template if</P>
+            <div class="tab">
+                <template v-if="templateIf">
+                    <div >
+                        Да
+                    </div>
+                    
+                </template> 
+            </div>
+         </div>
+         <div >
+            <P>multi-V-IF</P>
+            <div class="tab">
+                <div v-if="Math.random() > 0.2 && Math.random() <= 0.5 ">
+                    0.2 > x >= 0.5
+                </div>
+                <div v-else-if="Math.random() > 0.5 && Math.random() <= 0.9 "> 
+                    0.5 > x >= 0.9
+                </div>
+                <div v-else="Math.random() > 0.9">
+                    x>0.9
+                </div>
+            </div>
+         </div>
+         <div >
+            <P>V-SHOW</P>
+            <div class="tab">
+                <div v-show="ok"> OK </div>
+            </div>
+         </div>
+    </div>
+    
+    
+    <script src="script.js"></script> 
+</body>
+</html>
