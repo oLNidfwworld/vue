@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="block">
+            simple smart counter
+            <div style="display:flex;gap:10px;justify-content: center;">
+                <div class="btn" @click.prevent="plusCounter(), logger('plus',$event)">
+                    +
+                </div>
+                <div class="btn" @click.prevent="counter-- , logger('minus',$event)" >
+                    -
+                </div>
+            </div>
+            {{ counter }}
+        </div>
+        <div class="block"> 
+            <div>
+                simple keyup
+            </div>
+            <input type="button" value="focus input and press enter to show" class="btn" @keyup.enter="onlyOnKeyEnter= !onlyOnKeyEnter"> 
+                
+            </input>
+                <div v-show="onlyOnKeyEnter">
+                    Hidden text
+                </div>
+        </div>
+    </div>
+    
+    
+    <script src="script.js"></script> 
+</body>
+</html>

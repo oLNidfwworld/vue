@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.btn{
+    border: 1px solid rgba(0, 0, 0, 0.253);
+    width: fit-content;
+    padding: 5px;
+}
