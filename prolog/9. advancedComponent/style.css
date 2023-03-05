@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#app>div{
+    display: flex;
+    gap: 10px;
+}
+
+#spa{
+    width: 100%;
+    min-height: 10vh;
+}
