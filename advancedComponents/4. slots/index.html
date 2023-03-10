@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <div id="app">
+        <simple-slot>слот</simple-slot>
+        <initial-slot></initial-slot>
+        <initial-slot> свой</initial-slot>
+        <named-slot>
+            <template v-slot:header>
+                <h1>Здесь мог быть заголовок страницы</h1>
+            </template>
+
+            <template v-slot:default>
+                <p>Параграф для основного контента.</p>
+                <p>И ещё один.</p>
+            </template>
+
+            <template v-slot:footer>
+                <p>Некая контактная информация</p>
+            </template>
+        </named-slot>
+        
+        <visibility-slots> 
+            <template #default="slotProps"> <!-- or v-slot:default="{item}" or v-slot:default="{item:digit}" or v-slot:default="{item = '0'}" -->
+                <i class="fas fa-check"></i>
+                <span class="green">{{ slotProps.item }}</span> 
+            </template>
+        </visibility-slots>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

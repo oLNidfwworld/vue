@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <div id="app"> 
+        <div class="wrapper">
+            <div class="wrapper-page">
+                <header>
+                    <div class="container">
+                        <nav class="header-row">
+                            <ul class="header-row__wrapper">
+                                <li v-for="tab in tabs"
+                                :key="tab"
+                                :class="['header-row__tab',{active: curTab === tab}]"
+                                @click="curTab = tab">
+                                    {{ tab }}
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </header>
+                <div class="wrapper-content">
+                    <keep-alive> <!-- to cache inactive tabs -->
+                        <component :is="currentTabComponent" class="tab"></component>
+                    </keep-alive>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <script src="script.js"></script> 
+</body>
+</html>
